@@ -55,17 +55,30 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helper\BlogDPO.cs" />
+    <Compile Include="Helper\CommentDPO.cs" />
+    <Compile Include="Helper\FindAuthor.cs" />
+    <Compile Include="Helper\FindBlog.cs" />
     <Compile Include="ViewModel\AuthorViewModel.cs" />
     <Compile Include="ViewModel\BlogViewModel.cs" />
     <Compile Include="ViewModel\CommentViewModel.cs" />
-    <Compile Include="View\WindowAuthor.xaml.cs">
+    <Compile Include="View\AuthorWindows\WindowAuthor.xaml.cs">
       <DependentUpon>WindowAuthor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\WindowBlog.xaml.cs">
+    <Compile Include="View\AuthorWindows\WindowNewAuthor.xaml.cs">
+      <DependentUpon>WindowNewAuthor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BlogWindows\WindowBlog.xaml.cs">
       <DependentUpon>WindowBlog.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\WindowComment.xaml.cs">
+    <Compile Include="View\BlogWindows\WindowNewBlog.xaml.cs">
+      <DependentUpon>WindowNewBlog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CommentWindows\WindowComment.xaml.cs">
       <DependentUpon>WindowComment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CommentWindows\WindowNewComment.xaml.cs">
+      <DependentUpon>WindowNewComment.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -79,15 +92,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\WindowAuthor.xaml">
+    <Page Include="View\AuthorWindows\WindowAuthor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\WindowBlog.xaml">
+    <Page Include="View\AuthorWindows\WindowNewAuthor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\WindowComment.xaml">
+    <Page Include="View\BlogWindows\WindowBlog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BlogWindows\WindowNewBlog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CommentWindows\WindowComment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CommentWindows\WindowNewComment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

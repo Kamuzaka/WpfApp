@@ -23,7 +23,7 @@ namespace WpfApp.ViewModel
                 {
                     Id = 1,
                     BlogId = 1,
-                    AuthoId = 3,
+                    AuthorId = 3,
                     Content = "Комментарий 1",
                     DateComment = new DateTime(2020, 01, 10)
                 });
@@ -34,10 +34,25 @@ namespace WpfApp.ViewModel
                 {
                     Id = 2,
                     BlogId = 2,
-                    AuthoId = 4,
+                    AuthorId = 4,
                     Content = "Комментарий 2",
                     DateComment = new DateTime(2020, 02, 20)
                 });
+        }
+
+        public int MaxId()
+        {
+            int max = 0;
+
+            foreach (var c in this.ListComment)
+            {
+                if (max < c.Id)
+                {
+                    max = c.Id;
+                };
+            }
+
+            return max;
         }
     }
 }

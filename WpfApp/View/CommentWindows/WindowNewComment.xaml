@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApp.View.CommentWindows.WindowNewComment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp.View.CommentWindows"
+        mc:Ignorable="d"
+        Title="WindowNewComment" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Код:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Блог:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Автор:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Контент:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Дата комментария:" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5"/>
+
+        <TextBox x:Name="TbId" Grid.Row="0" Grid.Column="1" Height="24" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"
+                 Text="{Binding Id}" VerticalContentAlignment="Center" IsEnabled="False"/>
+
+        <ComboBox x:Name="CbBlog" Grid.Row="1" Grid.Column="1" Height="24" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"
+                  DisplayMemberPath="Blog" VerticalContentAlignment="Center"/>
+
+        <ComboBox x:Name="CbAuthor" Grid.Row="2" Grid.Column="1" Height="24" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"
+                  DisplayMemberPath="Author" VerticalContentAlignment="Center"/>
+
+        <TextBox x:Name="TbContent" Grid.Row="3" Grid.Column="1" Height="24" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"
+                 Text="{Binding Content}" VerticalContentAlignment="Center"/>
+        
+        <DatePicker x:Name="DpDate" Grid.Row="4" Grid.Column="1" Height="24" Width="130" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"
+                 Text="{Binding Date}" VerticalContentAlignment="Center"/>
+
+
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button x:Name="BtSave" Content="Сохранить" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top"
+                    Margin="5,10,10,5" IsDefault="True" Click="BtnSave_Click"/>
+
+            <Button x:Name="BtCansel" Content="Отменить" Height="25" HorizontalAlignment="Right" VerticalAlignment="Top"
+                    Margin="5,10,10,5" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

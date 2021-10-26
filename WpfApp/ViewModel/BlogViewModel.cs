@@ -40,5 +40,20 @@ namespace WpfApp.ViewModel
                     Date = new DateTime(2020, 02, 02)
                 });
         }
+
+        public int MaxId()
+        {
+            int max = 0;
+
+            foreach (var b in this.ListBlog)
+            {
+                if (max < b.Id)
+                {
+                    max = b.Id;
+                };
+            }
+
+            return max;
+        }
     }
 }

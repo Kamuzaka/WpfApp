@@ -24,11 +24,15 @@ namespace WpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static int IdAuthor { get; set; }
+        public static int IdBlog { get; set; }
+        public static int IdComment { get; set; }
+
+
         public MainWindow()
         {
             InitializeComponent();
         }
-
 
         private void Author_OnClick(object sender, RoutedEventArgs e)
         {

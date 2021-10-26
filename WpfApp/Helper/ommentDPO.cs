@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-namespace WpfApp.Model
+namespace WpfApp.Helper
 {
-    class Author
+    class AuthorDPO
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
@@ -16,7 +14,6 @@ namespace WpfApp.Model
         public string Email { get; set; }
         public string Phone { get; set; }
         public DateTime DateRegistration { get; set; }
-
 
         public Author() { }
         public Author(int Id, string FirstName, string LastName, string Email, string Phone, DateTime DateRegistration)
@@ -27,11 +24,6 @@ namespace WpfApp.Model
             this.Email = Email;
             this.Phone = Phone;
             this.DateRegistration = DateRegistration;
-        }
-
-        public Author ShallowCopy()
-        {
-            return (Author)this.MemberwiseClone();
         }
     }
 }

@@ -64,6 +64,32 @@ namespace WpfApp.ViewModel
                     Phone = "8 928 444 44 44",
                     DateRegistration = new DateTime(2004, 04, 04)
                 });
+
+            this.ListAuthor.Add(
+                new Author
+                {
+                    Id = 5,
+                    FirstName = "Артур",
+                    LastName = "Артуров",
+                    Email = "Артуров@mail.ru",
+                    Phone = "8 928 555 55 55",
+                    DateRegistration = new DateTime(2005, 05, 05)
+                });
+        }
+
+        public int MaxId()
+        {
+            int max = 0;
+
+            foreach (var a in this.ListAuthor)
+            {
+                if (max < a.Id)
+                {
+                    max = a.Id;
+                };
+            }
+
+            return max;
         }
     }
 }
